@@ -157,3 +157,22 @@ extension String {
 ```swift
 _ = "https://www.jianshu.com/".openURL()
 ```
+
+### 对[Kingfisher](https://github.com/onevcat/Kingfisher)的扩展 降低了系统的耦合度，并且方便实现切面编程吧
+
+```swift
+extension UIImageView {
+    ///这块需要注意下 placeholderImage ,这个必须得在主项目下的image 才能取到
+    public  func setUrlImage(_ url:String ,placeholderImage:String = "placeholder",options:KingfisherOptionsInfo = [.transition(ImageTransition.fade(1.2))]) -> Void {
+        self.kf.setImage(with: URL(string: url), placeholder: UIImage(named: placeholderImage), options: options)
+    }
+}
+```
+```swift
+extension UIButton {
+    /// 通过key 加载网络图片
+    public func setUrlImage(url:String , forState state: UIControlState = .normal , options:KingfisherOptionsInfo = [.transition(ImageTransition.fade(1.2))]) -> Void {
+        self.kf.setImage(with: URL(string: url)! , for: state,options:options)
+    }
+}
+```

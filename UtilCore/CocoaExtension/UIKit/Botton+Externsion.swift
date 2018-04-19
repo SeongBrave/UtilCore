@@ -56,5 +56,4 @@ extension UIButton {
     public func setUrlImage(url:String , forState state: UIControlState = .normal , options:KingfisherOptionsInfo = [.transition(ImageTransition.fade(1.2))]) -> Void {
         self.kf.setImage(with: URL(string: url)! , for: state,options:options)
     }
-
 }
