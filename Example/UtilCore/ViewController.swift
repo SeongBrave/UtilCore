@@ -46,23 +46,35 @@ class ViewController: Base_Vc {
 //            .rx.tap
 //            .subscribe(onNext: { [unowned self] ( _ ) in
 //                /// 表示已经登陆过 之后就不跳转引导界面了
-////                self.view.showLoading()
-////                let time: TimeInterval = 3.0
-////                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: {
-////                    self.view.hideLoading()
-////
-////
-////                })
-//
-//
+//                self.view.showLoading()
+//                let time: TimeInterval = 3.0
+//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: {
+//                    self.view.hideLoading()
+//                })
+//            })
+//            .disposed(by: disposeBag)
+        
+//        self.test_Btn
+//            .rx.tap
+//            .map{MikerError("testdomain",code:10010,message:"测试错误信息啊")}
+//            .bind(to: self.rx_showerrorpage)
+//            .disposed(by: self.disposeBag)
+        
+//        self.test_Btn
+//            .rx.tap
+//            .subscribe(onNext: { [unowned self] ( _ ) in
+//                self.view.toast("简单弹出框")
 //            })
 //            .disposed(by: disposeBag)
         
         self.test_Btn
             .rx.tap
-            .map{MikerError("testdomain",code:10010,message:"测试错误信息啊")}
-            .bind(to: self.rx_showerrorpage)
-            .disposed(by: self.disposeBag)
+            .subscribe(onNext: {  ( _ ) in
+                _ = "https://www.jianshu.com/".openURL()
+            })
+            .disposed(by: disposeBag)
+        
+        
     }
 
 }

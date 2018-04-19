@@ -18,8 +18,6 @@ pod 'UtilCore', '~> 0.0.1'
 ### 1. loading的支持
 
   这块可以支持[NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)的所有动画,并且支持自定义加载动画
-
-  ![](https://raw.githubusercontent.com/ninjaprox/NVActivityIndicatorView/master/Demo.gif)
 ![](./doc/loading.png)
 #### 具体使用
 
@@ -67,3 +65,95 @@ self.test_Btn
          .bindTo(self.manageVm!.reloadTrigger)
          .disposed(by: disposeBag)
  ```
+
+### 弹出框Toast
+
+```swift
+        self.test_Btn
+            .rx.tap
+            .subscribe(onNext: { [unowned self] ( _ ) in
+                self.view.toast("简单弹出框")
+            })
+            .disposed(by: disposeBag)
+
+```
+通过给UIView 扩展`rx_error`属性，直接就可以把网络错误信号绑定到UIView的`rx_error`
+```swift
+extension UIView{
+    /// 绑定rx 可以通过信号显示错误信息
+   public var rx_error: AnyObserver<MikerError> {
+    return Binder(self) { view, error in
+            view.toastError(error)
+            }.asObserver()
+    }
+}
+```
+具体使用时
+```swift
+self.manageVm?
+            .error
+            .asObserver()
+            .bindTo(self.view.rx_error)
+            .disposed(by: disposeBag)
+```
+
+### 对[URLNavigator](https://github.com/devxoul/URLNavigator)做了一些简单的扩展，使用起来非常方便
+>URLNavigator帮助实现了项目的模块化
+
+#### 统一封装生成路由链接
+```swift
+extension String {
+    /// 返回路由路径
+    ///
+    /// - Parameter param: 请求参数
+    public func  getUrlStr(param:[String:String]? = nil) -> String {
+        let that = self.removingPercentEncoding ?? self
+        let appScheme = Navigator.scheme
+        let relUrl = "\(appScheme)://\(that)"
+        guard param != nil else {
+            return relUrl
+        }
+        var paramArr:[String] = []
+        for (key , value) in param!{
+            paramArr.append("\(key)=\(value)")
+        }
+        let rel = paramArr.joined(separator: "&")
+        guard rel.count > 0 else {
+            return  relUrl
+        }
+        return relUrl + "?\(rel)"
+    }
+    /// 直接通过路径 和参数调整到 界面
+    public func openURL( _ param:[String:String]? = nil) -> Bool {
+        let that = self.removingPercentEncoding ?? self
+        /// 为了使html的文件通用 需要判断是否以http或者https开头
+        guard that.hasPrefix("http") || that.hasPrefix("https") || that.hasPrefix("\(Navigator.scheme )://") else {
+            var url = ""
+            ///如果以 '/'开头则需要加上本服务域名
+            if that.hasPrefix("/") {
+                url = UtilCore.sharedInstance.baseUrl + that
+            }else{
+                url = that.getUrlStr(param: param)
+            }
+            // 首先需要判断跳转的目标是否是界面还是处理事件 如果是界面需要: push 如果是事件则需要用:open
+            let isPushed = Navigator.that?.push(url) != nil
+            if isPushed {
+                return true
+            } else {
+                return (Navigator.that?.open(url)) ?? false
+            }
+        }
+        // 首先需要判断跳转的目标是否是界面还是处理事件 如果是界面需要: push 如果是事件则需要用:open
+        let isPushed = Navigator.that?.push(that) != nil
+        if isPushed {
+            return true
+        } else {
+            return (Navigator.that?.open(that)) ?? false
+        }
+    }
+}
+```
+使用的时候非常方便,比如要跳转到:`https://www.jianshu.com/`
+```swift
+_ = "https://www.jianshu.com/".openURL()
+```

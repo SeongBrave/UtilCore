@@ -8,18 +8,20 @@
 
 import UIKit
 import UtilCore
+import URLNavigator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let navigator = Navigator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let loading = CircleLogoView(28)
         loading.circleByOneSecond = 3.0
         UtilCore.loadingView  = .customView(loadingView: loading)
         UtilCore.loadingBgColor = .white
+        UtilCoreNavigatorMap.initialize(navigator: navigator)
         // Override point for customization after application launch.
         return true
     }

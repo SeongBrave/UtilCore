@@ -138,9 +138,7 @@ extension String {
         } else {
             return (Navigator.that?.open(that)) ?? false
         }
-    }
-    
-    
+    } 
 }
 extension UIView{
     /// 跳转url
