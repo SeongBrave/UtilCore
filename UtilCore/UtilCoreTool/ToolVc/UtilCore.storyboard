@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web Vc-->
+        <scene sceneID="zbi-8b-n37">
+            <objects>
+                <viewController storyboardIdentifier="Web_Vc" hidesBottomBarWhenPushed="YES" id="3hq-R3-9Tq" customClass="Web_Vc" customModule="UtilCore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="08l-CB-oNk"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLA-DN-kQM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kbt-tT-LJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQp-bF-q4l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iQp-bF-q4l" firstAttribute="top" secondItem="kbt-tT-LJ0" secondAttribute="top" id="Igy-IC-D9q"/>
+                            <constraint firstItem="iQp-bF-q4l" firstAttribute="leading" secondItem="kbt-tT-LJ0" secondAttribute="leading" id="XD3-hx-HQX"/>
+                            <constraint firstItem="HLA-DN-kQM" firstAttribute="top" secondItem="iQp-bF-q4l" secondAttribute="bottom" id="rvq-cE-EgP"/>
+                            <constraint firstItem="iQp-bF-q4l" firstAttribute="centerX" secondItem="kbt-tT-LJ0" secondAttribute="centerX" id="vWX-Wx-Q0q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="web_Wb" destination="iQp-bF-q4l" id="teN-h8-7Z3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60w-tp-Gcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="-631"/>
+        </scene>
+        <!--扫一扫-->
+        <scene sceneID="Y1o-m4-WLd">
+            <objects>
+                <viewController storyboardIdentifier="Scan_Vc" title="扫一扫" hidesBottomBarWhenPushed="YES" id="qwc-Io-YvD" customClass="Scan_Vc" customModule="UtilCore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JES-QE-wEZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="y0P-Sd-LKs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jsY-SR-uXi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qf-5n-USq" customClass="ScanView" customModule="UtilCore" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-4R-28S">
+                                        <rect key="frame" x="60" y="157" width="254" height="254"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan-line" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-8J-wSy">
+                                                <rect key="frame" x="8" y="5" width="238" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="X7B-L1-5es"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="7m4-8J-wSy" firstAttribute="leading" secondItem="aNf-4R-28S" secondAttribute="leading" constant="8" id="5Wq-O2-Rt3"/>
+                                            <constraint firstItem="7m4-8J-wSy" firstAttribute="centerX" secondItem="aNf-4R-28S" secondAttribute="centerX" id="BZy-rR-mVe"/>
+                                            <constraint firstItem="7m4-8J-wSy" firstAttribute="top" secondItem="aNf-4R-28S" secondAttribute="top" constant="5" id="bfu-N5-Lb8"/>
+                                            <constraint firstAttribute="width" secondItem="aNf-4R-28S" secondAttribute="height" multiplier="1:1" id="md8-Cl-afn"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码放入框内，可自行扫动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZV-hB-lyW">
+                                        <rect key="frame" x="110" y="426" width="154" height="13"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="aNf-4R-28S" firstAttribute="centerY" secondItem="3qf-5n-USq" secondAttribute="centerY" constant="-40" id="2CD-OX-pO2"/>
+                                    <constraint firstItem="aNf-4R-28S" firstAttribute="leading" secondItem="3qf-5n-USq" secondAttribute="leading" constant="60" id="G8t-2e-R8L"/>
+                                    <constraint firstItem="aNf-4R-28S" firstAttribute="centerX" secondItem="3qf-5n-USq" secondAttribute="centerX" id="YsF-Db-o6x"/>
+                                    <constraint firstItem="lZV-hB-lyW" firstAttribute="top" secondItem="aNf-4R-28S" secondAttribute="bottom" constant="15" id="Zbw-A8-Zk5"/>
+                                    <constraint firstItem="lZV-hB-lyW" firstAttribute="centerX" secondItem="aNf-4R-28S" secondAttribute="centerX" id="jL4-wi-DXO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3qf-5n-USq" firstAttribute="leading" secondItem="jsY-SR-uXi" secondAttribute="leading" id="H9B-pc-9dq"/>
+                            <constraint firstItem="y0P-Sd-LKs" firstAttribute="top" secondItem="3qf-5n-USq" secondAttribute="bottom" id="MB2-h6-Vbp"/>
+                            <constraint firstAttribute="trailing" secondItem="3qf-5n-USq" secondAttribute="trailing" id="fJA-d1-xGr"/>
+                            <constraint firstItem="3qf-5n-USq" firstAttribute="top" secondItem="JES-QE-wEZ" secondAttribute="bottom" id="jX0-Yk-AOU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottom_Lb" destination="lZV-hB-lyW" id="s7B-a0-kZh"/>
+                        <outlet property="content_V" destination="aNf-4R-28S" id="0Jv-z0-ouM"/>
+                        <outlet property="scan_Content_V" destination="3qf-5n-USq" id="FMK-iu-754"/>
+                        <outlet property="scan_Line_HeightLc" destination="bfu-N5-Lb8" id="NjM-zj-PbL"/>
+                        <outlet property="scan_Line_ImgV" destination="7m4-8J-wSy" id="tll-8e-Djr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqC-mC-RUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="840"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scan-line" width="16" height="16"/>
+    </resources>
+</document>
