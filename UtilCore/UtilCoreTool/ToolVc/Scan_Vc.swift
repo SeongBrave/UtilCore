@@ -253,10 +253,9 @@ extension Scan_Vc{
 extension Scan_Vc: AVCaptureMetadataOutputObjectsDelegate
 {
     // 只要解析到数据就会调用
-    public func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!)
-    {
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection){
         // 检查：metadataObjects 对象不为空，并且至少包含一个元素
-        if metadataObjects == nil || metadataObjects.count == 0 {
+        if metadataObjects.count == 0 {
             return
         }
         guard let metadataObj = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else {
