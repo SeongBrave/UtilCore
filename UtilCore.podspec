@@ -39,7 +39,7 @@ TODO: 项目公用基础库，单独模块.
   s.dependency 'CryptoSwift', '~> 0.8.3'
   s.dependency 'SwiftyUserDefaults', '~> 3.0.1'
   #动画显示
-  s.dependency 'NVActivityIndicatorView', '~> 4.1.1'
+  s.dependency 'NVActivityIndicatorView', '~> 4.3.0'
   #autolayout的封装
   s.dependency 'SnapKit', '~> 4.0.0'
   #toast提示框
