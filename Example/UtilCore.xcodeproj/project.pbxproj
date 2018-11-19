@@ -174,7 +174,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				02287E2A66556A7F24369650 /* [CP] Embed Pods Frameworks */,
-				1D34A52B88044A2E5CA53448 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,8 +192,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				7B4315E50B79ADE8E3AB05DC /* [CP] Embed Pods Frameworks */,
-				1D658F22DD2FCCA1974139E5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,51 +312,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UtilCore_Example/Pods-UtilCore_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1D34A52B88044A2E5CA53448 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UtilCore_Example/Pods-UtilCore_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1D658F22DD2FCCA1974139E5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UtilCore_Tests/Pods-UtilCore_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B4315E50B79ADE8E3AB05DC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UtilCore_Tests/Pods-UtilCore_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB84AE786BDFFDCA37902474 /* [CP] Check Pods Manifest.lock */ = {
@@ -564,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eme.demo.UtilCore-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -580,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eme.demo.UtilCore-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
