@@ -70,7 +70,9 @@ class ViewController: Base_Vc {
         self.test_Btn
             .rx.tap
             .subscribe(onNext: {  ( _ ) in
-                _ = "https://www.jianshu.com/".openURL()
+                
+                _ = "alert".openURL(["title":"标题啊","message":"信息呀"])
+//                _ = "https://www.jianshu.com/".openURL()
             })
             .disposed(by: disposeBag)
         

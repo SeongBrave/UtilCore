@@ -21,6 +21,6 @@ open class BaseList_Vm : Base_Vm {
     open var page:Int = 0
     
     /// 是否还有下一页
-    open let hasNextPage = Variable(true)
+    public let hasNextPage = Variable(true)
     
 }

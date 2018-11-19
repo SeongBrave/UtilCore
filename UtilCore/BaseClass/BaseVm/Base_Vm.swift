@@ -17,12 +17,12 @@ import SwiftyJSON
 open class Base_Vm {
     
     /// 保存错误
-    open let error = PublishSubject<MikerError>()
-    open let disposeBag = DisposeBag()
+    public let error = PublishSubject<MikerError>()
+    public let disposeBag = DisposeBag()
     /// 断网重新加载
-    open let reloadTrigger = PublishSubject<Void>()
+    public let reloadTrigger = PublishSubject<Void>()
     ///主要用于 列表的刷新 不是上啦加载更多时 如果出错则会弹出 错误界面
-    open let refresherror = PublishSubject<MikerError>()
+    public let refresherror = PublishSubject<MikerError>()
     
     public init() {
         
