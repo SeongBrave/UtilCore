@@ -16,7 +16,7 @@ extension UILabel {
         //从文本0开始6个字符字体HelveticaNeue-Bold,16号
         if let replace  = replace {
             let range = (attributeString.string as NSString).range(of: replace)
-            attributeString.addAttributes([NSAttributedStringKey.foregroundColor: value], range: range)
+            attributeString.addAttributes([NSAttributedString.Key.foregroundColor: value], range: range)
         }
         self.attributedText = attributeString
     }
@@ -25,7 +25,7 @@ extension UILabel {
         let str = NSMutableAttributedString(string: text)
         let style = NSMutableParagraphStyle()
         style.lineSpacing = lineSpacing
-        str.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSRange(location: 0,length: str.length))
+        str.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0,length: str.length))
         self.attributedText = str
     }
     

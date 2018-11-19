@@ -49,7 +49,7 @@ open class PlaceholderTextView : UITextView {
     func commonInit() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(PlaceholderTextView.textDidChange),
-                                               name: NSNotification.Name.UITextViewTextDidChange,
+                                               name:UITextView.textDidChangeNotification,
                                                object: nil)
         
         placeholderLabel.font = font

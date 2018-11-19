@@ -28,8 +28,8 @@ extension UIButton {
     public func changeEdgeLeftImage(_ offset:CGFloat) {
         let titleSize = self.titleLabel!.intrinsicContentSize
         let imageSize = self.imageView!.bounds.size
-        self.imageEdgeInsets = UIEdgeInsetsMake(0,titleSize.width + offset, 0, -(titleSize.width + offset));
-        self.titleEdgeInsets = UIEdgeInsetsMake(0, -(imageSize.width + offset), 0, imageSize.width + offset)
+        self.imageEdgeInsets = UIEdgeInsets(top: 0,left: titleSize.width + offset, bottom: 0, right: -(titleSize.width + offset));
+        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageSize.width + offset), bottom: 0, right: imageSize.width + offset)
         
     }
     /// 同意修改按钮配置颜色
@@ -53,7 +53,7 @@ extension UIButton {
 }
 extension UIButton {
     /// 通过key 加载网络图片
-    public func setUrlImage(url:String , forState state: UIControlState = .normal , options:KingfisherOptionsInfo = [.transition(ImageTransition.fade(1.2))]) -> Void {
+    public func setUrlImage(url:String , forState state: UIControl.State = .normal , options:KingfisherOptionsInfo = [.transition(ImageTransition.fade(1.2))]) -> Void {
         self.kf.setImage(with: URL(string: url)! , for: state,options:options)
     }
 }

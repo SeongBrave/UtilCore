@@ -32,8 +32,8 @@ TODO: 项目公用基础库，单独模块.
       'UtilCore' => ['UtilCore/**/*.{xcassets,storyboard}']
   }
   s.frameworks = 'UIKit'
-  s.dependency 'ModelProtocol', '~> 0.0.1'
-  s.dependency 'EmptyDataView', '~> 0.0.1'
+  s.dependency 'ModelProtocol', '~> 0.1.0'
+  s.dependency 'EmptyDataView', '~> 0.1.0'
   s.dependency 'RxSwift', '~> 4.4.0'  #依赖关系，该项目所依赖的其他库，如果有多个需要填写多个s.dependency
   s.dependency 'RxCocoa', '~> 4.4.0'
   s.dependency 'CryptoSwift', '~> 0.13.0'
