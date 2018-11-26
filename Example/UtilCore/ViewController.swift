@@ -30,6 +30,15 @@ class ViewController: Base_Vc {
      */
     override func setupUI() {
         
+        let str:String? = "asdf"
+        
+        if str.isSome {
+            
+            print(str.or("asdf"))
+            
+        }
+        
+        
     }
     /**
      app 主题 设置
