@@ -215,12 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 3LZ89J5Z7Y;
+						DevelopmentTeam = 6GU5V4X2VU;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 3LZ89J5Z7Y;
+						DevelopmentTeam = 6GU5V4X2VU;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -511,11 +511,12 @@
 			baseConfigurationReference = 07A39E06454610F6D718D486 /* Pods-UtilCore_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3LZ89J5Z7Y;
+				DEVELOPMENT_TEAM = 6GU5V4X2VU;
 				INFOPLIST_FILE = UtilCore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eme.demo.UtilCore-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = seongbrave.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
@@ -527,11 +528,12 @@
 			baseConfigurationReference = 292EE33D3FF2CAB8598F5FC7 /* Pods-UtilCore_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3LZ89J5Z7Y;
+				DEVELOPMENT_TEAM = 6GU5V4X2VU;
 				INFOPLIST_FILE = UtilCore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eme.demo.UtilCore-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = seongbrave.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
@@ -542,7 +544,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C485EB12B30E41D4A0CEB76D /* Pods-UtilCore_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 3LZ89J5Z7Y;
+				DEVELOPMENT_TEAM = 6GU5V4X2VU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -552,6 +554,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,12 +568,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 412F3E2BAB8D7D05B2835247 /* Pods-UtilCore_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 3LZ89J5Z7Y;
+				DEVELOPMENT_TEAM = 6GU5V4X2VU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

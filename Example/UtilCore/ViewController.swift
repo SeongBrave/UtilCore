@@ -37,9 +37,8 @@ class ViewController: Base_Vc {
             print(str.or("asdf"))
             
         }
-        
-        
     }
+    
     /**
      app 主题 设置
      */
@@ -89,6 +88,3 @@ class ViewController: Base_Vc {
     }
 
 }
-
-
-

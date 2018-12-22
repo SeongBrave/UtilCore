@@ -177,6 +177,7 @@ extension String {
 }
 ///字符串的处理
 extension String {
+    
     public  var length:Int {
         return self.count
     }
@@ -188,16 +189,19 @@ extension String {
         return range.location
         
     }
+    
     public func lastIndexOf(target: String) -> Int? {
         
         let range = (self as NSString).range(of: target, options: NSString.CompareOptions.backwards)
         return self.length - range.location - 1
         
     }
+    
     public func contains(s: String) -> Bool {
         return (self.range(of: s) != nil) ? true : false
     }
 }
+
 // MARK: - 根据文字计算高度
 extension String {
     public func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
@@ -206,9 +210,12 @@ extension String {
         return boundingBox.height
     }
 }
+
 // MARK: -转换汉字为拼音
-extension String{
-    public func transformToPinYin()->String{
+extension String {
+    
+    public func transformToPinYin() -> String {
+        
         let mutableString = NSMutableString(string: self)
         CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
         CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)

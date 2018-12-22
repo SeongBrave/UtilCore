@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UtilCore'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '项目公用基础库'
 
 # This description is used to generate tags and improve search results.

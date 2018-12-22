@@ -24,7 +24,6 @@ open class Base_Vc: UIViewController {
         self.errorPageView.isHidden = isHiden
     }
     
-    
     open override  func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -48,17 +47,17 @@ open class Base_Vc: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     /**
      自定义leftBarButtonItem
      */
-    open func customLeftBarButtonItem()  {
+    open func customLeftBarButtonItem() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "iconfontback"), style: .plain, target: self, action: #selector(backToView))
     }
+    
     /**
      自定义返回上级界面
      */
-    @objc open  func backToView()  {
+    @objc open  func backToView() {
         _ = self.navigationController?.popViewController(animated: true)
     }
     
@@ -68,16 +67,18 @@ open class Base_Vc: UIViewController {
     open func setupUI() {
         
     }
+    
     /**
      app 主题 设置
      */
-    open func setViewTheme(){
+    open func setViewTheme() {
         
     }
+    
     /**
      绑定到viewmodel 设置
      */
-    open func bindToViewModel(){
+    open func bindToViewModel() {
         
     }
 }

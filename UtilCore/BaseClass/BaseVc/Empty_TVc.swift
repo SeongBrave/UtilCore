@@ -10,6 +10,7 @@ import Foundation
 import EmptyDataView
 
 open class Empty_TVc: Base_Vc  {
+    
     ///是否要显示空列表界面
     public var showEmptyView:Bool = false
     open override func viewDidLoad() {
@@ -18,7 +19,6 @@ open class Empty_TVc: Base_Vc  {
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     open override func viewWillDisappear(_ animated: Bool) {
@@ -27,12 +27,12 @@ open class Empty_TVc: Base_Vc  {
     
     open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
-    
 }
-extension Empty_TVc :EmptyDelegate{
+
+extension Empty_TVc :EmptyDelegate {
+    
     /**
      配置是否允许显示空视图
      
@@ -43,10 +43,11 @@ extension Empty_TVc :EmptyDelegate{
      - false 不显示
      
      */
-    open func shouldDisplay(emptyView scrollView: UIScrollView) -> Bool{
+    open func shouldDisplay(emptyView scrollView: UIScrollView) -> Bool {
         return self.showEmptyView
     }
-    open func didTap(emptyView scrollView: UIScrollView, button: UIButton){
+    
+    open func didTap(emptyView scrollView: UIScrollView, button: UIButton) {
         
     }
 }
